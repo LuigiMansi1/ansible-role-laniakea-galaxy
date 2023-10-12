@@ -7,6 +7,7 @@
     certbot_virtualenv_package_name: python3-virtualenv # usegalaxy_eu.certbot
     pip_package: python3-pip
     ### DISABLE SSL ###
+    # TODO make this optional.
     # Certbot and SSL configuration is currently disabled since the DNS record is needed
     # this will be checked and tested later
     # github issue: 
@@ -33,12 +34,14 @@
 
     nginx_selinux_allow_local_connections: true
     ### DISABLE SSL ###
+    # TODO make this optional.
     #nginx_servers:
     #  - redirect-ssl
     #nginx_ssl_servers:
     #  - galaxy
     ### DISABLE SSL ###
     # No SSL config
+    # Only nginx server se to galaxy.
     nginx_servers:
       - galaxy
     nginx_enable_default_server: false
@@ -66,7 +69,8 @@
         image/png
         image/svg+xml
         image/x-icon
-    ### DISABLE SSL ###   
+    ### DISABLE SSL ###
+    # TODO make this optional.
     #nginx_ssl_role: usegalaxy_eu.certbot
     #nginx_conf_ssl_certificate: "/etc/letsencrypt/live/{{ inventory_hostname }}/fullchain.pem"
     #nginx_conf_ssl_certificate_key: "/etc/letsencrypt/live/{{ inventory_hostname }}/privkey.pem"
