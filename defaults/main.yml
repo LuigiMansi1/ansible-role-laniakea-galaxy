@@ -133,11 +133,6 @@ certbot_domains:
 certbot_agree_tos: --agree-tos
 
 #_____________________________________
-# Systemd
-# galaxy_restart_handler_name: "Restart Galaxy"
-galaxy_manage_systemd: true
-
-#_____________________________________
 # Job_conf variables
 # galaxy_workers: 4
 # galaxy_local_slot: 2
