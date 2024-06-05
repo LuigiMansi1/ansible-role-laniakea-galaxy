@@ -1,4 +1,4 @@
 ---
 - name: Include laniakea.galaxy_interactive_tools role
   include_role:
-    name: laniakea.galaxy_interactive_tools
+    name: ansible-role-laniakea-galaxy-interactive-tools 

@@ -15,6 +15,4 @@ galaxy_info:
     - web
 
 dependencies:
-  - role: galaxyproject.cvmfs
-  - role: mtangaro.vault_secrets
-    when: retrieve_passphrase_from_vault
+  - role: ansible-cvmfs

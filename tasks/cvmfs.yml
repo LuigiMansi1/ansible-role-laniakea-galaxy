@@ -1,7 +1,7 @@
 ---
 - name: Include cvmfs role
   include_role:
-    name: galaxyproject.cvmfs
+    name: ansible-cvmfs 
   vars:
     # CVMFS vars
     cvmfs_role: client

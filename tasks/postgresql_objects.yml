@@ -2,7 +2,7 @@
 
 - name: Include postgresql role
   include_role:
-    name: galaxyproject.postgresql
+    name: ansible-postgresql
   vars:
     postgresql_version: "{{ laniakea_postgresql_version }}"
     postgresql_objects_users:
@@ -15,7 +15,7 @@
 
 - name: Include postgresql objects role
   include_role:
-    name: galaxyproject.postgresql_objects
+    name: ansible-postgresql-objects
     apply:
       become: true
       become_user: postgres

@@ -2,37 +2,37 @@
 - src: robertdebock.bootstrap
 
 # requirements to install galaxy
-- src: galaxyproject.galaxy
+- src: https://github.com/galaxyproject/ansible-galaxy
   version: 0.10.4
 
-- src: galaxyproject.nginx
+- src: https://github.com/galaxyproject/ansible-nginx
   version: 0.7.1
 
-- src: galaxyproject.postgresql
+- src: https://github.com/galaxyproject/ansible-postgresql
   version: 1.1.2
 
-- src: galaxyproject.postgresql_objects
+- src: https://github.com/galaxyproject/ansible-postgresql-objects
   version: 1.2.0
 
-- src: geerlingguy.pip
+- src: https://github.com/geerlingguy/ansible-role-pip
   version: 2.0.0
 
-- src: galaxyproject.miniconda
+- src: https://github.com/galaxyproject/ansible-miniconda
   version: 0.3.1
 
 # - src: usegalaxy_eu.galaxy_systemd
 
-- src: usegalaxy_eu.certbot
+- src: https://github.com/usegalaxy-eu/ansible-certbot
   version: 0.1.11
 
 # - src: galaxyproject.proftpd
 
-- name: galaxyproject.tusd
+- name: https://github.com/galaxyproject/ansible-role-tusd
   version: 0.0.1  
 
-- src: galaxyproject.cvmfs
+- src: https://github.com/galaxyproject/ansible-cvmfs
   version: 0.2.14
 
-- src: laniakea.galaxy_interactive_tools
+- src: https://github.com/Laniakea-elixir-it/ansible-role-laniakea-galaxy-interactive-tools
 
-- src: laniakea.cvmfs_client_config
+- src: https://github.com/Laniakea-elixir-it/ansible-role-laniakea-cvmfs-client-config

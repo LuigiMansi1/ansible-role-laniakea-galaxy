@@ -1,7 +1,7 @@
 ---
 - name: "Include nginx role"
   include_role:
-    name: galaxyproject.nginx
+    name: ansible-nginx
   vars:
     pip_virtualenv_command: /usr/bin/python3 -m virtualenv # usegalaxy_eu.certbot, usegalaxy_eu.tiaas2, galaxyproject.galaxy
     certbot_virtualenv_package_name: python3-virtualenv # usegalaxy_eu.certbot
@@ -71,7 +71,7 @@
         image/x-icon
     ### DISABLE SSL ###
     # TODO make this optional.
-    #nginx_ssl_role: usegalaxy_eu.certbot
+    #nginx_ssl_role: ansible-certbot
     #nginx_conf_ssl_certificate: "/etc/letsencrypt/live/{{ inventory_hostname }}/fullchain.pem"
     #nginx_conf_ssl_certificate_key: "/etc/letsencrypt/live/{{ inventory_hostname }}/privkey.pem"
     ### DISABLE SSL ###

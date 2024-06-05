@@ -1,7 +1,7 @@
 ---
 - name: Include miniconda role
   include_role:
-    name: uchida.miniconda
+    name: ansible-miniconda
     public: true 
   vars:
     miniconda_prefix: "{{ laniakea_miniconda_prefix }}"
