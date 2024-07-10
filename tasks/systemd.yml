@@ -21,3 +21,13 @@
     galaxy_systemd_zergling_uwsgi_config_style: yaml
     galaxy_systemd_mode: "{{ uwsgi_mode }}"
   when: uwsgi_mode == "zerg"
+
+- name: Configure Galaxy systemd with socket mode
+  include_role:
+    name: usegalaxy_eu.galaxy_systemd
+  vars:
+    galaxy_systemd_handler_env: ""
+    galaxy_systemd_workflow_scheduler_env: ""
+    galaxy_config_file: '{{ laniakea_galaxy_config_file }}'
+    galaxy_systemd_mode: "socket"
+  when: systemd_mode == "socket"
