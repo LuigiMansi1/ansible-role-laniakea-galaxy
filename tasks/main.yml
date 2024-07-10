@@ -24,7 +24,7 @@
 - name: include galaxy role
   include: install_galaxy.yml
 
-  - name: move job conf
+- name: move job conf
   import_tasks: move_job_conf.yml
   become: yes
   become_user: galaxy
