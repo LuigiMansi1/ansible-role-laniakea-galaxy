@@ -18,6 +18,11 @@
 - name: Include tusd role
   import_tasks: tusd.yml
 
+- name: Set default job conf
+  import_tasks: job_conf.yml
+  become: yes
+  become_user: galaxy
+
 - name: include galaxy role
   include: install_galaxy.yml
 
@@ -35,9 +40,9 @@
 - name: Include nginx role
   import_tasks: nginx.yml
 
-- name: Enable Galaxy Interactive Tools
-  import_tasks: galaxy_it.yml
-  when: enable_interactive_tools
+#- name: Enable Galaxy Interactive Tools
+#  import_tasks: galaxy_it.yml
+#  when: enable_interactive_tools
 
 # Start the Galaxy production environment.
 # The Galaxy DB is now populated at startup, therefore we need to start it before user creation.
