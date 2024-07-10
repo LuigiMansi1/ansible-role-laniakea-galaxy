@@ -53,11 +53,10 @@ pip install ansible==4.10.0 ansible-core==2.11.12
 # clone repo
 git clone <repo_path>
 # copy test playbook
-cp ansible-role-laniakea-galaxy/test.yml test.yml
-cd ansible-role-laniakea-galaxy
+cp ansible-role-laniakea-galaxy/tests/test.yml test.yml
 # update hostname and asnible user
 vim inventory
-ansible-galaxy install -r requirements.yml
+ansible-galaxy install -r ansible-role-laniakea-galaxy/requirements.yml
 cd ../
 # run playbook
 ansible-playbook -i ansible-role-laniakea-galaxy/inventory test.yml
