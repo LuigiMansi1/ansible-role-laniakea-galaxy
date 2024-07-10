@@ -56,7 +56,7 @@
   systemd:
     name: galaxy.service
     state: started
-  when: galaxy_version == "release_22.05"
+  when: galaxy_version == "release_23.0"
 
 - name: "[VM] Wait Galaxy"
   wait_for:
