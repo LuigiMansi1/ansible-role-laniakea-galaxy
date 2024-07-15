@@ -18,16 +18,13 @@
 - name: Include tusd role
   import_tasks: tusd.yml
 
-- name: Set default job conf
-  import_tasks: job_conf.yml
-
 - name: include galaxy role
   include: install_galaxy.yml
 
-- name: move job conf
-  import_tasks: move_job_conf.yml
-  become: yes
-  become_user: galaxy
+- name: Set default job conf
+  import_tasks: job_conf.yml
+  become: true
+  become_user: "{{ laniakea_galaxy_user.name }}"
 
 - name: Include miniconda role run by galaxy user
   import_tasks: miniconda.yml
