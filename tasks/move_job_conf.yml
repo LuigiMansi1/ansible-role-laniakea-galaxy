@@ -1,4 +1,0 @@
-- name: Copy job_conf configuration file
-  template:
-    src: 'job_conf.yml.j2'
-    dest: '{{ laniakea_galaxy_config_dir }}/job_conf.yml'
