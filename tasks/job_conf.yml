@@ -25,3 +25,7 @@
     galaxy_registered_concurrent_jobs: 2
   when: ansible_processor_vcpus >= 16
 
+- name: Copy job_conf configuration file
+  template:
+    src: 'templates/galaxy/config/job_conf.yml.j2'
+    dest: '{{ galaxy_mutable_config_dir }}/job_conf.yml'
